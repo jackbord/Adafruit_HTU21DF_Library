@@ -32,6 +32,7 @@
 class Adafruit_HTU21DF {
 public:
   Adafruit_HTU21DF();
+  ~Adafruit_HTU21DF();
 
   bool begin(TwoWire *theWire = &Wire);
   float readTemperature(void);

@@ -36,6 +36,12 @@ Adafruit_HTU21DF::Adafruit_HTU21DF() {
   _last_temp = 0.0f;
 }
 
+Adafruit_HTU21DF::~Adafruit_HTU21DF(){
+  if (i2c_dev) {
+    delete i2c_dev;
+  }
+}
+
 /**
  * Initialises the I2C transport, and configures the IC for normal operation.
  * @param theWire Pointer to TwoWire I2C object, uses &Wire by default
